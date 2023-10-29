@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Gift</title>
+  </head>
+  <body>
+    <h1>New Gift</h1>
+    <form action="/gifts/<%= gift._id %>?_method=PUT" method="POST">
+      <p>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Gift Name"
+          value="<%= gift.name %>"
+        />
+      </p>
+
+      <p>
+        <label for="name">Price:</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          placeholder="Gift Price"
+          value="<%= gift.price %>"
+        />
+      </p>
+
+      <p>
+        <label for="manufacturing">Manufacturing:</label>
+        <input
+          type="text"
+          id="manufacturing"
+          name="manufacturing"
+          placeholder="Manufacturing"
+          value="<%= gift.manufacturing %>"
+        />
+      </p>
+
+      <p>
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+          <option value="return_gift">Return_Gift</option>
+          <option value="soft_toys">Soft_Toy</option>
+          <option value="board_game">Board_Game</option>
+        </select>
+      </p>
+
+      <button>Edit</button>
+      <p>
+        <a href="/gifts">All Products</a>
+      </p>
+    </form>
+  </body>
+</html>

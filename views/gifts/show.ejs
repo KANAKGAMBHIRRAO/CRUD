@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Product</title>
+    
+  </head>
+  <body>
+    <h1><%= gifts.name %></h1>
+    <p><b>Gift Price -</b><%= gifts.price %></p>
+    <p><b>Gift Category -</b><%= gifts.category %></p>
+    <p><b>Gift Manufactoring -</b><%= gifts.manufacturing %></p>
+    <p>
+      <a href="/gifts">All Gifts</a>
+      <a href="/gifts/<%= gifts._id %>/edit">Edit Gift</a>
+      <a href="/gifts/new">New Gift</a>
+    </p>
+      
+
+    <p>
+      <form action="/gifts/<%= gifts._id %>?_method=Delete" method="POST">
+        <button>Delete</button>
+      </form>
+      
+    </p>
+    
+  </body>
+</html>
